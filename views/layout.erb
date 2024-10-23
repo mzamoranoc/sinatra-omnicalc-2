@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Sinatra Omnicalc 2</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omnicalc</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Omnicalc: Your Calculation Helper</h1>
+    <nav>
+      <a href="/add">Addition</a> |
+      <a href="/subtract">Subtraction</a> |
+      <a href="/multiply">Multiplication</a> |
+      <a href="/divide">Division</a>
+    </nav>
+    <hr>
+  </header>
 
-  <body>
-    <table style="width: 100%" border="1">
-      <tr>
-        <td>
-          <a href="/add">Add</a>
-        </td>
-
-        <td>
-          <a href="/subtract">Subtract</a>
-        </td>
-
-        <td>
-          <a href="/multiply">Multiply</a>
-        </td>
-
-        <td>
-          <a href="/divide">Divide</a>
-        </td>
-      </tr>
-    </table>
+  <main>
     <%= yield %>
-  </body>
+  </main>
+
+  <footer>
+    <hr>
+    <p>© 2024 Omnicalc. All rights reserved.</p>
+  </footer>
+</body>
 </html>
